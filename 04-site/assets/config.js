@@ -4,7 +4,7 @@
  */
 window.FUNIL_CONFIG = {
   // Link do checkout (Kiwify, Hotmart, Cakto etc.). Enquanto vazio, os botões apontam para #checkout.
-  checkoutUrl: "",
+  checkoutUrl: "https://pay.kiwify.com.br/bB8UnVM",
 
   // Vídeo da página de obrigado (URL de embed do YouTube, Vimeo ou Panda). Ex.: "https://www.youtube.com/embed/SEU_ID"
   videoEmbedUrl: "",
