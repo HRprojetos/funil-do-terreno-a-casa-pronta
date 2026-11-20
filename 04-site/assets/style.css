@@ -533,3 +533,29 @@ h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -0.01em; }
 }
 .sobrancelha { font-weight: 500; }
 .hero h2 { font-family: var(--serif); font-style: normal; font-weight: 500; }
+
+/* Página toda escura (mesmo visual da página de obrigado) */
+.dobra--alt { background: var(--dark2); }
+.dobra--escura .entregaveis li,
+.dobra--escura .custo,
+.dobra--escura .bonus,
+.dobra--escura .faq__item,
+.dobra--escura .provas figure,
+.dobra--escura .dentro figure { background: var(--dark3); border-color: var(--stroke); color: var(--wd2); }
+.dobra--escura .entregaveis li strong,
+.dobra--escura .custo strong,
+.dobra--escura .bonus__corpo h3,
+.dobra--escura .faq__pergunta,
+.dobra--escura .dentro figcaption,
+.dobra--escura .stack-titulo,
+.dobra--escura .nota-suspense { color: var(--white); }
+.dobra--escura .nota-suspense b { color: var(--green-hi); }
+.dobra--escura .custo p,
+.dobra--escura .bonus__corpo p,
+.dobra--escura .faq__resposta p { color: var(--wd2); }
+.dobra--escura .faq__pergunta::after,
+.dobra--escura .faq__pergunta span { background: var(--dark2); color: var(--wd); }
+.dobra--escura .cats-ferr { color: var(--wd2); }
+.dobra--escura .cats-ferr b { color: var(--white); }
+.conversa h2 .hl { color: var(--green-hi); }
+.dobra--escura .faq__pergunta[aria-expanded="true"]::after { background: var(--green); color: var(--white); }
