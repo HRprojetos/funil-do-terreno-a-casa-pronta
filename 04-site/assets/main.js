@@ -30,7 +30,7 @@
       }
       el.setAttribute("href", url);
       el.addEventListener("click", function () {
-        if (window.fbq) fbq("track", "InitiateCheckout", { value: 37, currency: "BRL" });
+        if (window.fbq) fbq("track", "InitiateCheckout", { value: (window.FUNIL_CONFIG&&FUNIL_CONFIG.valor)||67, currency: "BRL" });
       });
     } else {
       el.setAttribute("href", "#checkout");

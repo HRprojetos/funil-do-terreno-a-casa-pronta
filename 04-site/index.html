@@ -45,6 +45,21 @@ fbq('track','ViewContent',{content_name:'Do Terreno a Casa Pronta',value:67,curr
   .cats span{font-size:13px;padding:7px 12px;border-radius:30px;border:1px solid rgba(0,0,0,.12);background:#fff}
   .cats b{color:#16A34A}
 </style>
+<style>
+  .hero__sem{margin:14px auto 0;font:600 15px/1.4 var(--font,inherit);color:var(--green-hi);letter-spacing:.01em}
+  .hero__oferta{margin:26px auto 0;max-width:420px;padding:22px 20px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(34,197,94,.35)}
+  .hero__preco{font-size:56px;font-weight:700;line-height:1;color:#fff;margin:0 0 14px}.hero__preco span{font-size:22px;vertical-align:top;margin-right:4px;color:var(--green-hi)}
+  .hero__preco small{display:block;font-size:14px;font-weight:400;line-height:1.4;color:#9aa3b2;margin-top:6px}
+  .hero__oferta .botao,.cta-linha .botao{width:100%;max-width:420px}
+  .cta-linha{text-align:center;margin-top:34px}
+  .cta-mini{font-size:13px;color:#9aa3b2;margin-top:10px}
+  .barra-cta{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(16,18,21,.96);border-top:1px solid rgba(255,255,255,.1);backdrop-filter:blur(8px);transform:translateY(110%);transition:transform .3s}
+  .barra-cta.on{transform:none}.barra-cta b{display:block;color:#fff;font-size:18px}.barra-cta span{font-size:11.5px;color:#9aa3b2;white-space:nowrap}
+  .barra-cta .botao{padding:14px 20px;font-size:14px;white-space:nowrap;margin:0}
+  @media(min-width:860px){.barra-cta{display:none}}
+  body{padding-bottom:0}
+</style>
+<script>addEventListener('scroll',function(){var b=document.getElementById('barra-cta'),o=document.getElementById('oferta');if(!b)return;var r=o.getBoundingClientRect();b.classList.toggle('on',scrollY>700&&!(r.top<innerHeight&&r.bottom>0))},{passive:true})</script>
 </head>
 <body>
 
@@ -62,66 +77,45 @@ fbq('track','ViewContent',{content_name:'Do Terreno a Casa Pronta',value:67,curr
   <section class="dobra dobra--escura hero tex glow" id="dobra-01" aria-labelledby="titulo-principal">
     <div class="container">
       <p class="sobrancelha">Para engenheiros e arquitetos que projetam casas</p>
-      <h1 id="titulo-principal">Mostre ao seu cliente <span class="hl">o terreno dele virando a casa que você projetou.</span> Em vídeo, feito por você com IA, em uma tarde.</h1>
+      <h1 id="titulo-principal">Render de fachada e vídeo da obra <span class="hl">com IA, em uma tarde.</span></h1>
+      <p class="hero__sem">Sem computador potente. Sem renderizador caro. Sem programa novo.</p>
       <figure class="hero-seq">
         <img src="assets/img/sequencia-4.webp" alt="Quatro imagens geradas com IA: a estrutura da casa vista de drone, a mesma cena com as instalações, a fachada pronta e a fachada à noite" width="1200" height="908" fetchpriority="high">
-        <figcaption>Imagens geradas com IA pelo Eng. Hélvio: da estrutura à fachada, de dia e à noite.</figcaption>
       </figure>
-      <p class="hero__lead">O <strong>Guia de Renderização Residencial com IA</strong> te dá <strong>10 PEDIDOS PRONTOS PARA COPIAR</strong> no Gemini e o passo a passo para juntar as imagens num <strong>VÍDEO DE TIME-LAPSE NO GOOGLE FLOW</strong>. Você só precisa de um print do Google Earth e um print do seu modelo 3D.</p>
-      <h2>A apresentação que fecha contrato, sem render 3D, sem programa novo e sem precisar entender de IA.</h2>
-      <div class="hero__seta" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M5 13l7 7 7-7"/></svg></div>
+      <p class="hero__lead"><strong>10 pedidos prontos para copiar</strong> no Gemini e o passo a passo do <strong>vídeo no Google Flow</strong>. Você só precisa de um print do Google Earth e um print do seu modelo 3D.</p>
+      <div class="hero__oferta">
+        <p class="hero__preco"><span>R$</span>67<small>à vista ou em até 6x</small></p>
+        <a class="botao" data-checkout href="#checkout">QUERO O GUIA AGORA</a>
+        <p class="cta-mini">Acesso imediato · 7 dias de garantia</p>
+      </div>
     </div>
   </section>
 
   <!-- DOBRA 02 -->
-  <section class="dobra dobra--escura dobra--alt tex" id="dobra-02" aria-labelledby="titulo-prova">
+  <section class="dobra dobra--escura dobra--alt tex" id="resultado" aria-labelledby="titulo-resultado">
     <div class="container">
-      <p class="sobrancelha">O que está por trás do método</p>
-      <h2 class="reveal" id="titulo-prova">Não é uma coleção de prompts. <span class="hl">É o vídeo pronto para mostrar ao cliente.</span></h2>
-      <div class="pilares">
-        <article class="pilar reveal"><div class="pilar__n"><b>10</b> pedidos</div><p><strong>Prontos para copiar e colar.</strong> Do lote vazio à fachada da casa que você projetou.</p></article>
-        <article class="pilar reveal"><div class="pilar__n"><b>1</b> conversa</div><p><strong>Tudo no Gemini, um pedido atrás do outro.</strong> É assim que o terreno e a casa não mudam de uma imagem para outra.</p></article>
-        <article class="pilar reveal"><div class="pilar__n"><b>1</b> vídeo</div><p><strong>Montado no Google Flow.</strong> As imagens viram um time-lapse da obra, do terreno à chave na mão.</p></article>
+      <p class="sobrancelha">O resultado</p>
+      <h2 class="reveal" id="titulo-resultado">Isso aqui saiu do Gemini e do Google Flow. <span class="hl">Não de um renderizador.</span></h2>
+      <div class="telas col-wide">
+        <figure><video src="assets/img/clipe-flow.mp4" poster="assets/img/clipe-flow.webp" autoplay muted loop playsinline preload="metadata" width="832" height="464" aria-label="Clipe do Google Flow: a câmera sobe por cima da estrutura da casa" style="width:100%;height:auto;display:block;aspect-ratio:832/464;object-fit:cover;background:#000"></video><figcaption>Um clipe do Google Flow, feito a partir das imagens.</figcaption></figure>
+        <figure><img src="assets/img/fachadas-3.webp" alt="Três fachadas geradas com IA: de dia, no fim de tarde e à noite" width="1200" height="310" loading="lazy"><figcaption>Bônus de render de fachada: de dia, no fim de tarde e à noite.</figcaption></figure>
+        <figure><img src="assets/img/antes-depois.webp" alt="A mesma obra vista de drone, antes e depois das instalações, com a mesma câmera e os mesmos vizinhos" width="1200" height="459" loading="lazy"><figcaption>Mesma câmera, mesmos vizinhos. A IA só acrescentou a etapa seguinte.</figcaption></figure>
       </div>
+      <div class="cta-linha reveal"><a class="botao" data-checkout href="#checkout">QUERO O GUIA · R$ 67</a><p class="cta-mini">Acesso imediato · Pix ou até 6x no cartão · 7 dias de garantia</p></div>
     </div>
   </section>
 
   <!-- DOBRA 03 -->
   <section class="dobra dobra--escura tex" id="dobra-03" aria-labelledby="titulo-pedra">
     <div class="container estreito">
-      <p class="sobrancelha">Talvez você esteja aqui</p>
-      <h2 class="reveal" id="titulo-pedra">Você já pediu uma imagem para a IA. <span class="hl">E na segunda imagem, o terreno era outro.</span></h2>
-      <p class="lead">A IA gera imagens bonitas. O problema é que cada uma vem de um mundo diferente: muda o terreno, muda a rua, muda a casa. Para inspirar, serve. Para apresentar um projeto, não.</p>
+      <p class="sobrancelha">Por que a sua IA não acerta</p>
+      <h2 class="reveal" id="titulo-pedra">Na segunda imagem, o terreno era outro. <span class="hl">O problema é pedir cada imagem do zero.</span></h2>
       <figure class="prova-img reveal">
         <img src="assets/img/sem-metodo.webp" alt="Dois erros reais de IA: a planta ficou gigante e engoliu o lote e a rua, e a casa encheu o lote inteiro sem os recuos do projeto" width="1200" height="459" loading="lazy">
         <figcaption>Erros reais dos nossos testes, antes do método.</figcaption>
       </figure>
-      <div class="vozes">
-        <blockquote class="voz reveal">Peço a fachada e depois a obra, e a casa vem completamente diferente.”</blockquote>
-        <blockquote class="voz reveal">Render 3D de verdade é caro e demorado para o tamanho dos meus projetos.”</blockquote>
-        <blockquote class="voz reveal">Vejo vídeos de terreno virando casa e não faço ideia de como fazem.”</blockquote>
-        <blockquote class="voz reveal">Meu cliente não entende planta. Ele precisa ver.”</blockquote>
-        <blockquote class="voz reveal">Quero conteúdo que mostre obra, mas não tenho obra pronta para filmar.”</blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- DOBRA 04 -->
-  <section class="dobra dobra--escura dobra--alt tex" id="dobra-04" aria-labelledby="titulo-diag">
-    <div class="container">
-      <div class="estreito">
-        <p class="sobrancelha">O diagnóstico</p>
-        <h2 class="reveal" id="titulo-diag">O problema não é a ferramenta. <span class="hl">É pedir cada imagem do zero.</span></h2>
-        <p class="lead">Numa obra, a alvenaria herda a fundação, e ninguém refaz a fundação para pintar a parede. O Guia de Renderização Residencial com IA aplica essa lógica às imagens: cada pedido parte da imagem anterior e acrescenta só a próxima etapa da obra.</p>
-        <p class="lead" style="margin-top:24px"><strong>Com o Guia de Renderização Residencial com IA você vai:</strong></p>
-      </div>
-      <ul class="beneficios col-wide">
-        <li class="reveal"><span class="tick"><svg width="14" height="14"><use href="#i-check"/></svg></span><span><strong>Mostrar ao cliente o terreno dele virando a casa dele,</strong> antes de a obra começar.</span></li>
-        <li class="reveal"><span class="tick"><svg width="14" height="14"><use href="#i-check"/></svg></span><span><strong>Fechar mais contratos</strong> com uma apresentação que os concorrentes da sua cidade não têm.</span></li>
-        <li class="reveal"><span class="tick"><svg width="14" height="14"><use href="#i-check"/></svg></span><span><strong>Ter um vídeo de antes e depois</strong> pronto para o WhatsApp e para o Reels.</span></li>
-        <li class="reveal"><span class="tick"><svg width="14" height="14"><use href="#i-check"/></svg></span><span><strong>Fazer tudo sozinho, em uma tarde,</strong> sem render 3D e sem aprender programa novo.</span></li>
-      </ul>
-      <div class="estreito"><p class="nota-resp"><strong>Importante:</strong> as imagens são visualizações e ilustrações. Não substituem levantamento nem projeto técnico.</p></div>
+      <p class="lead">Numa obra, a alvenaria herda a fundação. O guia aplica essa lógica às imagens: cada pedido parte da imagem anterior e acrescenta só a próxima etapa. Mesmo terreno, mesma rua, mesma casa, do começo ao fim.</p>
+      <p class="nota-resp"><strong>Importante:</strong> as imagens são visualizações e ilustrações. Não substituem levantamento nem projeto técnico.</p>
     </div>
   </section>
 
@@ -137,12 +131,7 @@ fbq('track','ViewContent',{content_name:'Do Terreno a Casa Pronta',value:67,curr
         <article class="passo reveal"><div class="passo__n">Passo 4</div><h3>Monte o vídeo</h3><p>No Google Flow, as imagens viram um time-lapse da obra.</p></article>
         <article class="passo reveal"><div class="passo__n">Passo 5</div><h3>Mostre ao cliente</h3><p>Na reunião, no WhatsApp e no Reels.</p></article>
       </div>
-      <div class="telas col-wide" id="sequencia">
-        <figure><img src="assets/img/antes-depois.webp" alt="A mesma obra vista de drone, antes e depois das instalações, com a mesma câmera e os mesmos vizinhos" width="1200" height="459" loading="lazy"><figcaption>Mesma câmera, mesmos vizinhos. A IA só acrescentou a etapa seguinte.</figcaption></figure>
-        <figure><video src="assets/img/clipe-flow.mp4" poster="assets/img/clipe-flow.webp" autoplay muted loop playsinline preload="metadata" width="832" height="464" aria-label="Clipe do Google Flow: a câmera sobe por cima da estrutura da casa" style="width:100%;display:block;aspect-ratio:832/464;object-fit:cover;background:#000"></video><figcaption>Um clipe do Google Flow, feito a partir das imagens.</figcaption></figure>
-        <figure><img src="assets/img/ebook-paginas.webp" alt="Páginas do e-book com o método, as mensagens de abertura e os prompts" width="1200" height="900" loading="lazy"><figcaption>Por dentro do material: o guia rápido e o bônus de render de fachada</figcaption></figure>
       </div>
-    </div>
   </section>
 
   <!-- DOBRA 06 -->
@@ -157,8 +146,9 @@ fbq('track','ViewContent',{content_name:'Do Terreno a Casa Pronta',value:67,curr
         <li class="reveal"><span class="tick"><svg width="14" height="14"><use href="#i-check"/></svg></span><span><strong>Plano B para imagem errada</strong>A frase que refaz a imagem sem perder o que já estava certo.</span></li>
         <li class="reveal"><span class="tick"><svg width="14" height="14"><use href="#i-check"/></svg></span><span><strong>Bônus · 5 prompts de render de fachada</strong>O print do seu modelo 3D vira foto real da fachada, de dia, no fim de tarde, à noite e na chuva.</span></li>
       </ul>
-      <figure class="prova-img reveal col-wide" style="margin-top:28px"><img src="assets/img/fachadas-3.webp" alt="Três fachadas geradas com IA: de dia, no fim de tarde e à noite" width="1200" height="310" loading="lazy"><figcaption>Do bônus de render de fachada: de dia, no fim de tarde e à noite.</figcaption></figure>
+      <figure class="prova-img reveal col-wide" style="margin-top:28px"><img src="assets/img/ebook-paginas.webp" alt="Páginas do e-book com o método, as mensagens de abertura e os prompts" width="1200" height="900" loading="lazy"><figcaption>Por dentro do material: o guia rápido e o bônus de render de fachada.</figcaption></figure>
       <p class="cats-ferr col-wide">Feito para: <b>Gemini</b> · <b>Google Flow</b></p>
+      <div class="cta-linha reveal"><a class="botao" data-checkout href="#checkout">QUERO O GUIA · R$ 67</a><p class="cta-mini">Acesso imediato · Pix ou até 6x no cartão · 7 dias de garantia</p></div>
     </div>
   </section>
 
@@ -177,22 +167,7 @@ fbq('track','ViewContent',{content_name:'Do Terreno a Casa Pronta',value:67,curr
           <li><span class="tick"><svg width="12" height="12"><use href="#i-x"/></svg></span>Procura um software que gere projeto técnico. Aqui a IA ilustra; o projeto continua sendo seu.</li>
           <li><span class="tick"><svg width="12" height="12"><use href="#i-x"/></svg></span>Precisa de imagem técnica exata. Aqui as imagens são ilustração para apresentação.</li></ul></div>
       </div>
-      <div class="card-identificou col-wide">Se você se identificou com pelo menos 2 itens da primeira lista, este produto foi feito para você.</div>
-    </div>
-  </section>
-
-  <!-- DOBRA 08 -->
-  <section class="dobra dobra--escura dobra--alt tex" id="dobra-08" aria-labelledby="titulo-ancora">
-    <div class="container">
-      <p class="sobrancelha">Coloque na balança</p>
-      <h2 class="reveal" id="titulo-ancora">Quanto custa mostrar <span class="hl">"como vai ficar"</span> hoje?</h2>
-      <h3 class="stack-titulo">O caminho tradicional:</h3>
-      <div class="stack reveal">
-        <div class="srow"><span>Render 3D terceirizado</span><span class="pr">por imagem, em dias</span></div>
-        <div class="srow"><span>Animação de obra</span><span class="pr">fora do orçamento</span></div>
-        <div class="srow"><span>Aprender modelagem 3D</span><span class="pr">meses de curso</span></div>
-      </div>
-      <p class="nota-suspense">Ou 10 pedidos prontos e uma tarde de trabalho. <b>Veja abaixo.</b></p>
+      
     </div>
   </section>
 
@@ -226,22 +201,7 @@ fbq('track','ViewContent',{content_name:'Do Terreno a Casa Pronta',value:67,curr
         <div><b>2</b><p>O acesso chega no seu e-mail em minutos.</p></div>
         <div><b>3</b><p>Você tira o print do terreno do seu cliente e faz o pedido 1 no mesmo dia.</p></div>
       </div>
-    </div>
-  </section>
-
-  <!-- DOBRA 10 -->
-  <section class="dobra dobra--escura tex glow conversa" id="dobra-10" aria-labelledby="titulo-conversa">
-    <div class="container estreito">
-      <p class="sobrancelha">Conversa séria</p>
-      <h2 class="reveal" id="titulo-conversa">A decisão <span class="hl">é sua.</span></h2>
-      <p class="lead">Daqui, existem três caminhos.</p>
-      <div class="caminhos">
-        <div class="caminho reveal"><strong>1. Continuar sem imagens.</strong>E apresentar projetos só com planta, que o cliente não entende.</div>
-        <div class="caminho reveal"><strong>2. Pedir imagens soltas para a IA.</strong>E ver o terreno e a casa mudarem a cada tentativa.</div>
-        <div class="caminho caminho--bom reveal"><strong>3. Usar 10 pedidos prontos.</strong>Investir R$ 67 e mostrar ao seu cliente o terreno dele virando a casa dele.</div>
-      </div>
-      <p class="fecho"><strong>Garantia de 7 dias.</strong> Se não fizer sentido para você, pede o reembolso pela Kiwify e recebe 100% de volta.</p>
-      <p class="centro" style="margin-top:24px"><a class="botao" data-checkout href="#checkout">QUERO O MÉTODO COMPLETO</a></p>
+      <p class="fecho centro"><strong>Garantia de 7 dias.</strong> Se não fizer sentido para você, pede o reembolso pela Kiwify e recebe 100% de volta.</p>
     </div>
   </section>
 
@@ -263,19 +223,7 @@ fbq('track','ViewContent',{content_name:'Do Terreno a Casa Pronta',value:67,curr
         <article class="pilar reveal"><div class="pilar__n"><b>+200</b></div><p>projetos entregues em 9 estados: PB, RN, CE, PE, AL, RJ, SP, SC e RS.</p></article>
         <article class="pilar reveal"><div class="pilar__n"><b>Ex</b>-instrutor</div><p>de cursos de Revit e de Inteligência Artificial no IFPB.</p></article>
       </div>
-      <div class="pricebox">
-        <span class="pricebox__flag">Guia + 10 pedidos + vídeo</span>
-        <p class="pricebox__nome">Guia de Renderização Residencial com IA</p>
-        <p class="pricebox__por"><span class="px">R$<b>67</b>,00</span></p>
-        <p class="pricebox__parc">à vista (ou em até <b>6x</b> no cartão)</p>
-        <a class="botao" data-checkout href="#checkout">GARANTIR MEU ACESSO AGORA</a>
-        <ul class="selos">
-          <li><svg width="16" height="16"><use href="#i-lock"/></svg>Pagamento seguro</li>
-          <li><svg width="16" height="16"><use href="#i-zap"/></svg>Acesso imediato</li>
-          <li><svg width="16" height="16"><use href="#i-shield"/></svg>7 dias de garantia</li>
-        </ul>
       </div>
-    </div>
   </section>
 
   <!-- DOBRA 12 -->
@@ -284,6 +232,10 @@ fbq('track','ViewContent',{content_name:'Do Terreno a Casa Pronta',value:67,curr
       <p class="sobrancelha">Perguntas frequentes</p>
       <h2 id="titulo-faq">Antes de <span class="hl">decidir.</span></h2>
       <div class="faq">
+        <div class="faq__item">
+          <button class="faq__pergunta" aria-expanded="false" aria-controls="faq0" id="faq0-btn">Preciso de um computador potente?</button>
+          <div class="faq__resposta" id="faq0" role="region" aria-labelledby="faq0-btn"><p>Não. O Gemini e o Google Flow rodam nos servidores do Google: você usa pelo navegador, e quem faz o trabalho pesado é a nuvem. Não precisa de placa de vídeo nem de renderizador instalado.</p></div>
+        </div>
         <div class="faq__item">
           <button class="faq__pergunta" aria-expanded="false" aria-controls="faq1" id="faq1-btn">Preciso pagar alguma ferramenta?</button>
           <div class="faq__resposta" id="faq1" role="region" aria-labelledby="faq1-btn"><p>Dá para começar sem pagar nada: o Gemini tem uso gratuito com limites, e o Google Flow dá créditos diários grátis para quem tem conta Google. Com um plano pago do Google, você gera mais por dia.</p></div>
@@ -314,6 +266,9 @@ fbq('track','ViewContent',{content_name:'Do Terreno a Casa Pronta',value:67,curr
   </section>
 
 </main>
+
+<div class="barra-cta" id="barra-cta"><div><b>R$ 67</b><span>7 dias de garantia</span></div><a class="botao" data-checkout href="#checkout">QUERO O GUIA</a></div>
+
 
 <footer class="rodape">
   <div class="container">
